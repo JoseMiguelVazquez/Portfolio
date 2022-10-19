@@ -1,0 +1,223 @@
+:root {
+    --primary-color: rgb(31, 30, 30); /*gradient?*/
+    --secondary-color: rgb(0, 129, 80);
+    --primary-font-color: rgb(247, 247, 247);
+    --tertiary-color: rgb(56, 55, 55);
+    --quaternary-color: rgb(197, 128, 0);
+    --quinary-color: rgb(1, 92, 57);
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-image: linear-gradient(62deg, var(--tertiary-color) 0%, var(--primary-color) 100%);
+    /* background-color: var(--primary-color); */
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-font-color);
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: 0 2px 0 rgb(0 0 0 / 30%);
+}
+
+#navbar ul {
+    display: flex;
+    list-style-type: none;
+    margin-right: 30px;
+}
+
+.nav-link {
+    color: var(--primary-font-color);
+    text-decoration: none;
+    font-size: 1.3rem;
+    padding: 1.2rem 15px;
+    display: block;
+}
+
+.nav-link:hover {
+    background-color: var(--quinary-color);
+}
+
+#welcome-section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+#welcome-section p {
+    font-size: 1.3rem;
+    font-weight: 200;
+    font-style: italic;
+    color: var(--secondary-color);
+    
+}
+
+#projects {
+    padding: 100px 0;
+    background-color: var(--quinary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#projects h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+    border-bottom: 0.1rem solid var(--primary-font-color);
+    padding: 0 20px;
+    max-width: 92vw;
+}
+
+
+.projects-container {
+    display: grid;
+    width: 92vw;
+    max-width: 1300px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    column-gap: 2rem;
+    row-gap: 2rem;
+    margin-bottom: 65px;
+}
+
+.project-tile {
+    background-color: var(--tertiary-color);
+    color: var(--primary-font-color);
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.1rem;
+    box-shadow: 1px 1px 2px rgb(0 0 0 / 50%);
+    border-radius: 2px;
+}
+
+.project-image {
+    width: 100%;
+    height: calc(100% - 65px);
+    object-fit: cover;
+}
+
+.project-tile p {
+    display: block;
+    padding: 0.8rem 0;
+}
+
+.code {
+    color: var(--tertiary-color);
+    transition-timing-function: ease-out;
+    transition-duration: 0.3s;
+}
+
+.project-tile:hover .code {
+    color: var(--quaternary-color);
+}
+
+.show-all-btn {
+    text-decoration: none;
+    color: var(--primary-font-color);
+    background-color: var(--tertiary-color);
+    font-size: 1.3rem;
+    padding: 10px 15px;
+    transition-timing-function: ease-out;
+    transition-duration: 0.2s;
+}
+
+.show-all-btn:hover {
+    background-color: var(--quaternary-color);
+}
+
+#contact {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contact-section-header h2 {
+    font-size: 3rem; 
+}
+
+.contact-section-header p {
+    font-style: italic;
+    font-size: 1.3rem;
+    font-weight: 200;
+}
+
+.contact-section-links {
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact-link {
+    color: var(--quaternary-color);
+    text-decoration: none;
+    display: flex;
+    font-size: 1.6rem;
+    align-items: center;
+    margin: 8px 20px;
+    transition-timing-function: ease-out;
+    transition-duration: 0.3s;
+}
+
+.contact-link:hover {
+    transform: translateY(8px);
+}
+
+.contact-link i {
+    margin-right: 10px;
+}
+
+footer {
+    border-top: 2px solid var(--secondary-color);
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+footer p {
+    font-weight: 200;
+    margin-right: 30px; 
+}
+
+
+@media screen and (max-width: 780px) {
+    html {
+        font-size: 14px;
+    }
+}
+
